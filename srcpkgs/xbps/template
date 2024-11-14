@@ -41,6 +41,7 @@ post_install() {
 	case "$XBPS_TARGET_MACHINE" in
 		aarch64*)     suffix="/aarch64";;
 		*-musl)       suffix="/musl";;
+		riscv64*)     repo="https://repo.estela.moe/voidlinux/riscv64";;
 	esac
 
 	echo "repository=${repo}${suffix}" > \
