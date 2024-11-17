@@ -2,7 +2,7 @@
 pkgname=0ad
 version=0.0.26
 revision=9
-archs="x86_64* i686* aarch64* armv7l* ppc64le*"
+archs="x86_64* i686* aarch64* armv7l* ppc64le* riscv64*"
 build_helper=rust
 hostmakedepends="pkg-config perl cmake python3.11 rust cargo yasm tar clang"
 makedepends="SDL2-devel boost-devel gloox-devel libcurl-devel libenet-devel
