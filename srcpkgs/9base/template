@@ -25,6 +25,8 @@ pre_build() {
 	# implementation.
 	cp lib9/getcallerpc-arm.c lib9/getcallerpc-aarch64.c
 	cp lib9/getcallerpc-arm.c lib9/getcallerpc-mips.c
+	# riscv be like mips
+	cp lib9/getcallerpc-arm.c lib9/getcallerpc-riscv.c
 
 	# config.mk has conflicting flags to the build-style; we enforce
 	# specific ones in config.mk to make sure they don't get changed
@@ -49,6 +51,7 @@ pre_build() {
 	aarch64*) sed -i 's|^OBJTYPE \+=.*|OBJTYPE = aarch64|g' config.mk ;;
 	mips*)    sed -i 's|^OBJTYPE \+=.*|OBJTYPE = mips|g' config.mk ;;
 	ppc64*)   sed -i 's|^OBJTYPE \+=.*|OBJTYPE = power|g' config.mk ;;
+	riscv*)   sed -i 's|^OBJTYPE \+=.*|OBJTYPE = riscv|g' config.mk ;;
 	esac
 }
 
